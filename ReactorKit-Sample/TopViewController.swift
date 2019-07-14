@@ -11,9 +11,8 @@ import RxSwift
 import RxCocoa
 import ReactorKit
 
-final class TopViewController: UIViewController, StoryboardView {
-    var disposeBag: DisposeBag = .init()
-    
+final class TopViewController: UIViewController {
+    private let disposeBag: DisposeBag = .init()
     @IBOutlet private weak var increaseButton: UIButton!
     @IBOutlet private weak var decreaseButton: UIButton!
     @IBOutlet private weak var countLabel: UILabel!
@@ -23,7 +22,7 @@ final class TopViewController: UIViewController, StoryboardView {
         bind(reactor: reactor)
     }
     
-    func bind(reactor: TopViewReactor) {
+    private func bind(reactor: TopViewReactor) {
         increaseButton.rx.tap
             .map { TopViewReactor.Action.increase }
             .bind(to: reactor.action)
