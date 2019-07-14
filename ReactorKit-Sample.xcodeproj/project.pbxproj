@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1726B09322DAA21C00772577 /* TopViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1726B09222DAA21C00772577 /* TopViewReactor.swift */; };
 		1783718D22D2184800AAC50F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1783718C22D2184800AAC50F /* AppDelegate.swift */; };
 		1783718F22D2184800AAC50F /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1783718E22D2184800AAC50F /* TopViewController.swift */; };
 		1783719222D2184800AAC50F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1783719022D2184800AAC50F /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1726B09222DAA21C00772577 /* TopViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewReactor.swift; sourceTree = "<group>"; };
 		1783718922D2184800AAC50F /* ReactorKit-Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ReactorKit-Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1783718C22D2184800AAC50F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1783718E22D2184800AAC50F /* TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 				1783718C22D2184800AAC50F /* AppDelegate.swift */,
 				1783718E22D2184800AAC50F /* TopViewController.swift */,
 				1783719022D2184800AAC50F /* Main.storyboard */,
+				1726B09222DAA21C00772577 /* TopViewReactor.swift */,
 				1783719322D2184A00AAC50F /* Assets.xcassets */,
 				1783719522D2184A00AAC50F /* LaunchScreen.storyboard */,
 				1783719822D2184A00AAC50F /* Info.plist */,
@@ -189,6 +192,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1783718F22D2184800AAC50F /* TopViewController.swift in Sources */,
+				1726B09322DAA21C00772577 /* TopViewReactor.swift in Sources */,
 				1783718D22D2184800AAC50F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

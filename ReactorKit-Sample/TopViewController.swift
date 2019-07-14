@@ -7,11 +7,39 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
+import ReactorKit
 
-final class TopViewController: UIViewController {
+final class TopViewController: UIViewController, StoryboardView {
+    var disposeBag: DisposeBag = .init()
+    
+    @IBOutlet private weak var increaseButton: UIButton!
+    @IBOutlet private weak var decreaseButton: UIButton!
+    @IBOutlet private weak var countLabel: UILabel!
+    private let reactor = TopViewReactor()
     override func viewDidLoad() {
         super.viewDidLoad()
+        bind(reactor: reactor)
+    }
+    
+    func bind(reactor: TopViewReactor) {
+        increaseButton.rx.tap
+            .map { TopViewReactor.Action.increase }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
         
+        decreaseButton.rx.tap
+            .map { TopViewReactor.Action.decrease }
+            .bind(to: reactor.action )
+            .disposed(by: disposeBag)
+        
+        // State
+        reactor.state.map { $0.value }   // 10
+            .distinctUntilChanged()
+            .map { "\($0)" }               // "10"
+            .bind(to: countLabel.rx.text)
+            .disposed(by: disposeBag)
     }
 }
 
